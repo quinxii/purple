@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Scheherazade+New:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@700&display=swap" rel="stylesheet">
+    <title>home</title>
+</head>
+
+<style>
+    .all{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        height:24.5rem;
+    }
+    .box{
+        width:100%;
+        height:28rem;
+        background-color: #e0cdeb;
+        border-radius:0.8rem;
+        
+        position: relative;
+        top:-7rem;
+
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #say{
+        width:80%;
+        height:3rem;
+        position:relative;
+        top:-12rem;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    #ava{
+        width:7.5rem;
+        min-height: 7.5rem;
+        border-radius: 50%;
+        background-color: white;
+        position: relative;
+        top:-13rem;
+        border-color: white;
+    }
+    .container{
+        display: flex;
+        justify-content:safe;
+        align-items:center;
+    }
+    #fb,#ins,#email,#call,#vacxin{
+        width:90%;
+        background-color: white;
+        border-radius: 1rem;
+        height: 3.2rem;
+        margin-top: 2rem;
+        box-shadow:3px 5px 2px #d2b7e5;
+        cursor:pointer;
+        display:flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    #fbimg,#insimg,#emailimg,#callimg,#vacxinimg{
+        border-radius: 6px;
+        height:2.4rem;
+        width:2.4rem;
+        position:relative;
+        margin-right:5rem;
+        margin-left:1rem;
+    }
+    h1{
+        color:#a06cd5;
+        text-shadow:5px 4px 4px white;
+        font-size: 40px;
+        word-spacing: 5px;
+        font-family:'Bebas Neue', cursive;
+        animation: ease-in-out .10s infinite;
+    }
+    h2{
+        font-size:24px;
+        font-family: 'Scheherazade New', serif;
+        color:#a06cd5;
+    }
+    h3{
+        font-size:17px;
+        font-family: 'Scheherazade New', serif;
+        color:#a06cd5;
+        position:relative;
+        right:4rem;
+    }
+</style>
+
+<body style="background-color:#f0e6f5;margin:0.3rem;padding:0.3rem;">
+    <div class="all">
+        <img src="https://i.pinimg.com/564x/3a/61/21/3a6121aca709f3af52ef08e73c08fd44.jpg" style="width:100%;height:17rem;border-radius:0.8rem">
+        <div id="ava"></div>
+        <div id="say">
+            <h1 class="animate__animated animate__pulse">NGUYEN NHAT QUYNH</h1>
+        </div>
+    </div>
+    
+    <div class="box">
+        <div id="fb">
+            <div class="container">
+            <div><img id="fbimg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Facebook_logo_36x36.svg/480px-Facebook_logo_36x36.svg.png"></div>
+            <h2 id="textfb">Facebook</h2>
+            </div>
+        </div>
+ 
+        <div id="ins">
+            <div class="container">
+            <div><img id="insimg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/1024px-Instagram_icon.png"></div>
+            <h2 id="textins">Instagram</h2>
+            </div>
+        </div>
+
+        <div id="email">
+            <div class="container">
+            <div><img id="emailimg" src="https://cdn.iconscout.com/icon/free/png-256/gmail-2981844-2476484.png"></div>
+            <h2 id="textemail" style="display:unset">Email</h2>
+            <div id="e" style="display:none;"><h3 id="texte">nhatquynh246357@gmail.com</h3></div>
+            </div>
+        </div>
+
+        <div id="call">
+            <div class="container">
+            <div><img id="callimg" src="https://w7.pngwing.com/pngs/129/394/png-transparent-green-phone-icon-iphone-3g-telephone-call-computer-icons-phone-icon-miscellaneous-text-grass-thumbnail.png"></div>
+            <h2 id="textcall" style="display:unset">Contact</h2>
+            <div id="c" style="display:none;"><h2 id="textc">0374 111 908</h2></div>
+            </div>
+        </div>
+
+        <div id="vacxin">
+            <div class="container">
+            <div><img id="vacxinimg" src="https://content.govdelivery.com/attachments/fancy_images/USVHA/2021/01/4005196/covid-vaccine-01_original.png"></div>
+            <h2 id="textvac">Vaccine</h2>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    const fb=document.querySelector("#fb");
+    fb.onclick=()=>{
+        window.open("https://www.facebook.com/nhat.quynh.927543");
+    }
+    fb.onmouseover=()=>{
+        fb.style.background="linear-gradient(to bottom, #b185db 0%, #d2b7e5 100%)";
+        textfb.style.color="white";
+    }
+    fb.onmouseleave=()=>{
+        fb.style.background="white";
+        textfb.style.color="#a06cd5";
+    }
+
+    const ins=document.querySelector("#ins");
+    ins.onclick=()=>{
+        window.open("https://www.facebook.com/nhat.quynh.927543");
+    }
+    ins.onmouseover=()=>{
+        ins.style.background="linear-gradient(to bottom, #b185db 0%, #d2b7e5 100%)";
+        textins.style.color="white";
+    }
+    ins.onmouseleave=()=>{
+        ins.style.background="white";
+        textins.style.color="#a06cd5";
+    }
+
+    const email=document.querySelector("#email");
+    email.onmouseover=()=>{
+        email.style.background="linear-gradient(to bottom, #b185db 0%, #d2b7e5 100%)";
+        texte.style.color="white";
+        e.style.display="unset";
+        textemail.style.display="none";
+    }
+    email.onmouseleave=()=>{
+        email.style.background="white";
+        textemail.style.display="unset";
+        textemail.style.color="#a06cd5";
+        e.style.display="none";
+    }
+
+    const call=document.querySelector("#call");
+    call.onmouseover=()=>{
+        call.style.background="linear-gradient(to bottom, #b185db 0%, #d2b7e5 100%)";
+        textc.style.color="white";
+        c.style.display="unset";
+        textcall.style.display="none";
+    }
+    call.onmouseleave=()=>{
+        call.style.background="white";
+        textcall.style.display="unset";
+        textcall.style.color="#a06cd5";
+        c.style.display="none";
+    }
+
+    const vacxin=document.querySelector("#vacxin");
+    vacxin.onclick=()=>{
+        window.open("https://www.facebook.com/nhat.quynh.927543");
+    }
+    vacxin.onmouseover=()=>{
+        vacxin.style.background="linear-gradient(to bottom, #b185db 0%, #d2b7e5 100%)";
+        textvac.style.color="white";
+    }
+    vacxin.onmouseleave=()=>{
+        vacxin.style.background="white";
+        textvac.style.color="#a06cd5";
+    }
+</script>
+
+</html>
